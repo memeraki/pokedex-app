@@ -22,8 +22,8 @@ It gets the data from the public API - [Pokémon API](https://pokeapi.co)
 
 It shows Pokémons list:
 
-- with initial 20 Pokémons, containing basic information like: ‘name’, `type` and ‘sprite’
+- with initial 20 Pokémons, containing basic information like: id, name, type and sprite
 - with button to load more pokémons onto a screen
-- after clicking the pokémon from the list, you should see on screen extra details about its: ‘weight’ and ‘height’
+- after clicking the pokémon from the list, user see on screen extra details about its: weight and height
 - with input where user can filter Pokémons by names, ids and types
 - with button to switch between dark and light mode
