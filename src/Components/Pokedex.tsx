@@ -19,6 +19,8 @@ const Pokedex = ({ pokemons }: Props) => {
   // details modal
   const [modalShown, toggleModal] = useState<boolean>(false);
   const [currentPokemon, setCurrentPokemon] = useState<IPokemon>();
+
+  const [theme, setTheme] = useState('dark');
   
   const handleLoadMore = () => {
     setDisplayed(displayed+20);
@@ -36,10 +38,16 @@ const Pokedex = ({ pokemons }: Props) => {
     }
   }
 
+  const switchTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+  }
+
   return (
-    <div className="pokedex">
+    <div className="pokedex" data-theme={theme}>
       <div className="header">
         <h1>Pokedex</h1>
+        <button className="mode" onClick={switchTheme}>{theme === 'light' ? 'dark' : 'light'} mode</button>
         <Filters pokemons={pokemons} setSearchResults={setSearchResults}setDisplayed={setDisplayed}/>
       </div>
       <div className="pokemon-list">

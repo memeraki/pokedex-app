@@ -19,6 +19,7 @@ const Filters = ({ pokemons, setSearchResults, setDisplayed }: Props) => {
       || pokemon.id.toString().includes(search)
     );
     setSearchResults(results);
+    setDisplayed(20);
   }, [searchInput, pokemons]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
