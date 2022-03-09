@@ -18,7 +18,10 @@ function App() {
   return (
     <>
       { status !==  "Done" ? 
-        <div className='status'> {status} </div> : 
+        <div className='status'> 
+          <div className='pokeball'></div>
+          <div> {status} </div>
+        </div> : 
         <Pokedex pokemons={pokemons}/>}
     </>
   );

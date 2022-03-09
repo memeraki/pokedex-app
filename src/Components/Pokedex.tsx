@@ -47,8 +47,9 @@ const Pokedex = ({ pokemons }: Props) => {
           {
             searchResults.slice(0,displayed).map((pokemon:any) => (
               <li key={pokemon.id} onClick={handleOpenModal} id={pokemon.name}>
-                  <img src={pokemon.img} alt={pokemon.name}/>
-                  {pokemon.name} - #{pokemon.id >= 100 ? pokemon.id : pokemon.id < 10 ? "00"+pokemon.id: "0"+pokemon.id} - {pokemon.types.map((type: string) => (type+" "))}
+                #{pokemon.id >= 100 ? pokemon.id : pokemon.id < 10 ? "00"+pokemon.id: "0"+pokemon.id}
+                <img src={pokemon.img} alt={pokemon.name}/>
+                {pokemon.name} - {pokemon.types.map((type: string) => (type+" "))}
               </li>
             ))
           }

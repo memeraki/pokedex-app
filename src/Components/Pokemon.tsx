@@ -24,14 +24,18 @@ const Pokemon = ({ pokemon, isUp, close, change }: Props) => {
       }}
     >
       <button onClick={close} >Close</button>
-      <button onClick={change(pokemon.id-1)} >Prev Pokemon</button>
-      <button onClick={change(pokemon.id+1)} >Next Pokemon</button>
+      <br />
       <h1>{pokemon.name}</h1>
       <img src={pokemon.imgOfficial} alt={pokemon.name}/>
-        id: {pokemon.id}<br />
-        type: {pokemon.types.map((type: string) => (type+" "))}<br />
-        height: {pokemon.height}<br />
-        weight: {pokemon.weight}<br />
+      <p> #{pokemon.id >= 100 ? pokemon.id : pokemon.id < 10 ? "00"+pokemon.id: "0"+pokemon.id} </p>
+      <p> type: {pokemon.types.map((type: string) => (type+" "))} </p>
+      <p> height: {pokemon.height} </p>
+      <p> weight: {pokemon.weight} </p>
+      <br />
+      <div>
+        <button onClick={change(pokemon.id-1)} >Previous Pokemon</button>
+        <button onClick={change(pokemon.id+1)} >Next Pokemon</button>
+      </div>
     </div>
   </div>
   ) : null;

@@ -1,6 +1,6 @@
 import { IPokemon } from '../Interfaces';
 
-const POKEMON_API_BASE_URL = "https://pokeapi.co/api/v2/pokemon/?limit=160"; //with no limit 898
+const POKEMON_API_BASE_URL = "https://pokeapi.co/api/v2/pokemon/?limit=898"; //with no limit 898
 
 export const fetchData = async (url: string) => {
   let res = await fetch(url);
@@ -22,7 +22,7 @@ async function getOnePokeData(pokemon: IPokemon, setStatus: (status: string) => 
   });
   pokemon.img = response.sprites.front_default;
   pokemon.imgOfficial = response.sprites.other["official-artwork"].front_default;
-  setStatus(pokemon.name);
+  setStatus("Updating data about "+pokemon.name+"!");
   return pokemon;
 }
 
