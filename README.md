@@ -1,46 +1,29 @@
-# Getting Started with Create React App
+# pokedex-app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Catalogue containing some data about Pokémon
 
-## Available Scripts
+[Live - visit to see the application](https://memeraki.github.io/pokedex-app/)
 
-In the project directory, you can run:
+## Project setup & Start
 
-### `npm start`
+```
+npm install
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+npm start
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## About
 
-### `npm test`
+Application based on react-app and typescript
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+It gets the data from the public API - [Pokémon API](https://pokeapi.co)
 
-### `npm run build`
+It shows Pokémons list:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- with initial 20 Pokémons, containing basic information like: ‘name’, `type` and ‘sprite’
+- with button to load more pokémons onto a screen
+- after clicking the pokémon from the list, you should see on screen extra details about its: ‘weight’ and ‘height’
+- with input where user can filter Pokémons by names, ids and types
+- with button to switch between dark and light mode
